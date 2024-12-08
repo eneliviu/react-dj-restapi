@@ -12,24 +12,17 @@ export const CurrentUserContext = createContext();
 export const SetCurrentUserContext = createContext();
 
 function App() {
-  // useContext hook to pass user state as a prop down the component tree
-  // first, useContext hook to persist the state of the  currently logged in user.
-  const [currentUser, setCurrentUser] = useState(null);  // as props to Context hooks
-  // make network requests when the component mounts.
+  const [currentUser, setCurrentUser] = useState(null);
+
   const handleMount = async () => {
     try {
-      // make a GET request  to the user endpoint
-      // destructure the data property in place
       const { data } = await axios.get("dj-rest-auth/user/");
-      // set the currentUser to data
       setCurrentUser(data);
     } catch (err) {
       console.log(err);
     }
   };
 
-  // use the useEffect hook to have code run when a component mounts
-  // and pass it an empty dependency array
   useEffect(() => {
     handleMount();
   }, []);
@@ -37,8 +30,6 @@ function App() {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <SetCurrentUserContext.Provider value={setCurrentUser}>
-
-      {/* currentUser and setCurrentUser are now available to every child in the App.js */}
         <div className={styles.App}>
           <NavBar />
           <Container className={styles.Main}>
