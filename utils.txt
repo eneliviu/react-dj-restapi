@@ -1,1 +1,15 @@
 Fix for 'opensslErrorStack': 'https://stackoverflow.com/questions/69665222/node-js-17-0-1-gatsby-error-digital-envelope-routinesunsupported-err-os'
+
+USER STORIES:
+First  User Story for navigation: "As a user I can view a navbar from every page  so that I can navigate easily between pages."
+- Create a basic navbar component to our project using React-Bootstrap.
+
+“As a user I can create a new account so that I  can access all the features for signed up users”.
+- To do this we’ll need to connect our project to  the API and create a working SignUp form.
+
+
+“As a user I can sign in to the app so that I can access functionality for logged in users”
+- Create and style your form
+- Handle Events
+- Handle Errors
+
