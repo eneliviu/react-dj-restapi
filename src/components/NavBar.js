@@ -56,7 +56,6 @@ const NavBar = () => {
             </NavLink>
             {/* Ternary that will render appropriate icons 
               based on whether the user is logged in or not */}
-            console.log(currentUser)
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
