@@ -2,9 +2,7 @@ import axios from "axios";
 
 // the unique URL of the deployed project
 axios.defaults.baseURL = 'https://react-dj-restapi-eb6a7149ec97.herokuapp.com';
-
 // data format the API will be expecting
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
-
-// To avoid any CORS errors when sending cookies,  we also need to set withCredentials to true.
+// To avoid any CORS errors when sending cookies
 axios.defaults.withCredentials = true;
