@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // the unique URL of the deployed project
-axios.defaults.baseURL = 'https://dj-drf-api-763634fa56e5.herokuapp.com';
+axios.defaults.baseURL = 'https://react-dj-restapi-eb6a7149ec97.herokuapp.com';
 
 // data format the API will be expecting
 axios.defaults.headers.post["Content-Type"] = "multipart/form-data";

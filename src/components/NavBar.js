@@ -1,3 +1,5 @@
+// rafce snippet to create functional component
+
 import React, { useContext } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
@@ -21,6 +23,7 @@ const NavBar = () => {
       >
         <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
+
       <NavLink
         to="/signup"
         className={styles.NavLink}
@@ -53,6 +56,7 @@ const NavBar = () => {
             </NavLink>
             {/* Ternary that will render appropriate icons 
               based on whether the user is logged in or not */}
+            console.log(currentUser)
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
