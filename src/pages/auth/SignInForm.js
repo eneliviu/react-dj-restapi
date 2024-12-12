@@ -41,7 +41,7 @@ function SignInForm() {
       history.push("/");
       
     } catch (err) {
-      console.log('Error print')
+      console.error('Error:', err.response?.data || err.message);
       setErrors(err.response?.data);
     }
   };
